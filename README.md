@@ -44,6 +44,7 @@ GitHub Pages provisions the HTTPS certificate and redirects `www` to the canonic
 - Construction photograph: [Ben Koorengevel on Unsplash](https://unsplash.com/photos/construction-of-several-high-rise-buildings-is-underway-gROCANC38BU), under the [Unsplash License](https://unsplash.com/license). The photograph illustrates a construction environment; it does not depict a Shotwell deployment.
 - Shotwell logo and favicon: existing company brand assets from `shotwellai/website`.
 - Typefaces: Outfit and IBM Plex Mono via Google Fonts.
+- Interface icons: [Lucide](https://lucide.dev), with its ISC license included in `assets/icons/LICENSE`.
 
 ## Checks before publishing
 
