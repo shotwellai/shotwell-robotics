@@ -20,5 +20,5 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('click', (event) => {
   if (!event.target.closest('.site-header')) setMenu(false);
 });
-window.matchMedia('(min-width: 701px)').addEventListener('change', () => setMenu(false));
+window.matchMedia('(min-width: 761px)').addEventListener('change', () => setMenu(false));
 document.querySelector('#year').textContent = new Date().getFullYear();

@@ -19,23 +19,20 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;450;500;550;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/construction.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/controls/OrbitControls.js":"./assets/vendor/three/OrbitControls.js"}}</script>
   <script src="script.js" defer></script>
+  <script type="module" src="robots.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="Shotwell Robotics home">
-      <img src="assets/shotwell-logo-horizontal-black.svg" width="152" height="48" alt="Shotwell">
-      <span>Robotics</span>
-    </a>
+    <a class="brand" href="#" aria-label="Shotwell Robotics home"><img src="assets/shotwell-logo-horizontal-black.svg" width="152" height="48" alt="Shotwell"><span>Robotics</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation"><span class="icon menu-icon" aria-hidden="true"></span></button>
     <nav id="navigation" aria-label="Main navigation">
-      <a href="#approach">Our approach</a>
-      <a href="#focus">Our focus</a>
+      <a href="#approach">Our approach</a><a href="#products">Products</a>
       <a href="#contact" class="nav-contact">Build with us <span class="icon arrow-up-right" aria-hidden="true"></span></a>
     </nav>
   </header>
-
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <img class="hero-image" src="assets/construction.jpg" width="2400" height="1600" alt="Concrete building structures, tower cranes, and steel reinforcement on an active construction site" fetchpriority="high">
@@ -55,20 +52,37 @@
         <h2 id="approach-title">The next generation<br>of your jobsite.</h2>
         <div class="intro-copy"><p class="lead">Construction is physical, skilled, and full of variables. Robotics has to meet it there.</p><p>Shotwell is developing robots that help construction companies take on demanding, repetitive work. We start with the task, the crew, and the conditions on site, then build the technology around them.</p><p>Our aim is simple: give the people who build more capacity to get the job done.</p></div>
       </div>
-      <div class="principles" aria-label="Development priorities">
-        <span>Practical work</span><span>Human oversight</span><span>Measurable progress</span>
-      </div>
+      <div class="principles" aria-label="Development priorities"><span>Practical work</span><span>Human oversight</span><span>Measurable progress</span></div>
     </section>
 
-    <section class="focus section" id="focus" aria-labelledby="focus-title">
-      <div class="section-label"><span class="index">02</span><span class="eyebrow">What we're working toward</span></div>
-      <div class="section-heading"><h2 id="focus-title">Useful on the ground.</h2><p>We're exploring where robotics can make the biggest difference in a construction team's day.</p></div>
-      <div class="focus-grid">
-        <article><span class="focus-number" aria-hidden="true">/ 01</span><h3>Material handling</h3><p>Moving, staging, and positioning materials. Less time spent on repetitive handling, more time for the work that needs your crew's expertise.</p><span class="focus-tag">Move the work forward</span></article>
-        <article><span class="focus-number" aria-hidden="true">/ 02</span><h3>Repeatable site work</h3><p>Tasks that demand the same motion, again and again. A practical starting point for machines that can work consistently under human supervision.</p><span class="focus-tag">Make repetition useful</span></article>
-        <article><span class="focus-number" aria-hidden="true">/ 03</span><h3>Jobsite intelligence</h3><p>Understanding materials, tools, and changing surroundings. Building the perception and control that robots need to work in real construction environments.</p><span class="focus-tag">Understand the surroundings</span></article>
+    <section class="products section" id="products" aria-labelledby="products-title">
+      <div class="section-label"><span class="index">02</span><span class="eyebrow">Our products</span></div>
+      <div class="section-heading"><h2 id="products-title">Useful on the ground.</h2><p>Two ways we're bringing robotics to construction: a helping hand for drywall application, and another set of eyes for quality checks.</p></div>
+      <div class="product-grid">
+        <article class="product" aria-labelledby="drywall-title">
+          <div class="product-topline"><span class="eyebrow">01 / Application</span><span class="product-code">DW</span></div>
+          <div class="product-visual">
+            <div class="robot-view" data-robot="drywall" role="img" aria-label="Solid 3D drywall robot concept: four-wheeled base, three-stage telescoping mast, articulated arm, and application tool."><p class="render-fallback" hidden>3D preview unavailable.</p></div>
+          </div>
+          <h3 id="drywall-title">Drywall application robot</h3>
+          <p class="product-description">An extra arm for drywall work. A mobile platform brings a mast-mounted application arm to the work area.</p>
+          <dl class="hardware"><div><dt>Mobility</dt><dd>Wheeled base</dd></div><div><dt>Reach</dt><dd>Telescoping mast</dd></div><div><dt>Working head</dt><dd>Articulated application arm</dd></div></dl>
+          <ol class="product-walkthrough"><li><strong>Position.</strong> Move the wheeled base to the wall.</li><li><strong>Raise.</strong> Extend the telescoping mast to working height.</li><li><strong>Apply.</strong> Use the arm to position the application tool at the surface.</li></ol>
+          <a class="text-link" href="mailto:hello@shotwellrobotics.com?subject=Drywall%20application%20robot">Talk drywall with us <span class="icon arrow-up-right" aria-hidden="true"></span></a>
+        </article>
+        <article class="product" aria-labelledby="qc-title">
+          <div class="product-topline"><span class="eyebrow">02 / Inspection</span><span class="product-code">QC</span></div>
+          <div class="product-visual">
+            <div class="robot-view" data-robot="qc" role="img" aria-label="Solid 3D quality-check robot concept: four-wheeled base, telescoping mast, camera lens, and cylindrical LiDAR sensor."><p class="render-fallback" hidden>3D preview unavailable.</p></div>
+          </div>
+          <h3 id="qc-title">Quality-check robot</h3>
+          <p class="product-description">Another set of eyes on the work. A camera and LiDAR bring visual and spatial information together for construction quality checks.</p>
+          <dl class="hardware"><div><dt>Mobility</dt><dd>Wheeled base</dd></div><div><dt>Reach</dt><dd>Telescoping mast</dd></div><div><dt>Sensor head</dt><dd>Camera + LiDAR</dd></div></dl>
+          <ol class="product-walkthrough"><li><strong>Position.</strong> Bring the robot to the area being checked.</li><li><strong>Raise.</strong> Adjust the mast to place the sensors at inspection height.</li><li><strong>Inspect.</strong> Capture images and spatial measurements with the camera and LiDAR.</li></ol>
+          <a class="text-link" href="mailto:hello@shotwellrobotics.com?subject=Quality-check%20robot">Talk quality checks with us <span class="icon arrow-up-right" aria-hidden="true"></span></a>
+        </article>
       </div>
-      <p class="development-note"><span class="status-dot" aria-hidden="true"></span>In development. Shaped by real construction workflows.</p>
+      <p class="development-note"><span class="status-dot" aria-hidden="true"></span>In development. Renderings illustrate the product architecture, not final industrial designs.</p>
     </section>
 
     <section class="partnership section" aria-labelledby="partnership-title">
@@ -85,11 +99,10 @@
 
     <section class="contact section" id="contact" aria-labelledby="contact-title">
       <div class="section-label"><span class="index">04</span><span class="eyebrow">Let's get to work</span></div>
-      <div class="contact-layout"><div><h2 id="contact-title">What could your crew<br>do with an extra hand?</h2><p>Tell us what you're building, and where robotics could help.</p></div><a class="button button-dark" href="mailto:hello@shotwell.ai?subject=Construction%20robotics%20partnership">Talk to Shotwell <span class="icon arrow-up-right" aria-hidden="true"></span></a></div>
-      <a class="contact-email" href="mailto:hello@shotwell.ai">hello@shotwell.ai</a>
+      <div class="contact-layout"><div><h2 id="contact-title">What could your crew<br>do with an extra hand?</h2><p>Tell us what you're building, and where robotics could help.</p></div><a class="button button-dark" href="mailto:hello@shotwellrobotics.com?subject=Construction%20robotics">Talk to Shotwell <span class="icon arrow-up-right" aria-hidden="true"></span></a></div>
+      <a class="contact-email" href="mailto:hello@shotwellrobotics.com">hello@shotwellrobotics.com</a>
     </section>
   </main>
-
   <footer class="site-footer">
     <a class="brand" href="#" aria-label="Shotwell Robotics home"><img src="assets/shotwell-logo-horizontal-white.svg" width="152" height="48" alt="Shotwell"><span>Robotics</span></a>
     <p>Robotics for the work ahead.</p>
